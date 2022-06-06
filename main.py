@@ -11,7 +11,7 @@ def hello(name: str):
 @app.command()
 def goodbye(name: str, formal: bool = False):
     if formal:
-        typer.echo(f"Goodbye Ms. {name}. Have a good day.")
+        typer.echo(f"Goodye Ms. {name}. Have a good day.")
     else:
         typer.echo(f"Bye {name}!")
 
