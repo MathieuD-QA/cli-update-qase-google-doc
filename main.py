@@ -16,5 +16,7 @@ def goodbye(name: str, formal: bool = False):
         typer.echo(f"Bye {name}!")
 
 
+
+
 if __name__ == "__main__":
     app()
