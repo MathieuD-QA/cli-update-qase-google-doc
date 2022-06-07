@@ -1,22 +1,18 @@
 import typer
+from qase.client_qase import Qase
 
+qase_client = Qase()
 app = typer.Typer()
 
 
-@app.command()
-def hello(name: str):
-    typer.echo(f"Hello {name}")
+@app.command("get_test_run_id")
+def qase():
+    qase_client.get_test_run_id()
 
 
-@app.command()
-def goodbye(name: str, formal: bool = False):
-    if formal:
-        typer.echo(f"Goodye Ms. {name}. Have a good day.")
-    else:
-        typer.echo(f"Bye {name}!")
-
-
-
+@app.command("hello world")
+def home():
+    typer.echo("hello world")
 
 if __name__ == "__main__":
     app()
